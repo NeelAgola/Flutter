@@ -1,0 +1,83 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(Home());
+
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Whatsapp',
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+      ),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Whatsapp'),
+        elevation: 5,
+      ),
+      body: Container(
+        child: ListView(
+          children: [
+
+            ListTile(
+              title: Text('Neel'),
+              subtitle: Text('Hello'),
+              leading: Icon(Icons.account_circle),
+              trailing: Icon(Icons.adjust_rounded,color: Colors.teal),
+            ),
+
+            ListTile(
+              title: Text('Akshit'),
+              subtitle: Text('Where are you?'),
+              leading: Icon(Icons.account_circle),
+              trailing: Icon(Icons.adjust_rounded ,color: Colors.teal,),
+            ),
+
+            ListTile(
+              title: Text('Prunthil'),
+              subtitle: Text('ok'),
+              leading: Icon(Icons.account_circle),
+              trailing: Icon(Icons.adjust_rounded,color: Colors.teal),
+              ),
+            
+
+            ListTile(
+              title: Text('Kelvin'),
+              subtitle: Text('Hey buddy!'),
+              leading: Icon(Icons.account_circle),
+              trailing: Icon(Icons.adjust_rounded,color: Colors.teal)
+              ),
+            
+
+            ListTile(
+              title: Text('Bhai to Bhai he'),
+              subtitle: Text('ela eey'),
+              leading: Icon(Icons.account_circle),
+              trailing: Icon(Icons.adjust_rounded,color: Colors.teal)
+              ),
+            
+
+          ],
+        )
+      )
+    );
+  }
+}
